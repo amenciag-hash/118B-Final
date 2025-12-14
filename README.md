@@ -7,7 +7,7 @@ This solo project trains a Flappy Bird agent using a simple neuroevolution appro
 
 Run configuration used for the main results in this paper:
 
-python fast_train_plus.py --seed 0 --gens 200 --pop 20 --max_steps 4000 --logdir runs/trial_seed0 --save_pop_every 1 --save_policy_every 1 --eval_every 1 --eval_seeds 0,1,2,3,4
+python fast_train_plus.py --seed 0 --gens 200 --pop 20 --max_steps 4000 --logdir runs/exp1 --save_pop_every 1 --save_policy_every 1 --eval_every 1 --eval_seeds 0,1,2,3,4
 
 View Champion
 
