@@ -66,13 +66,17 @@ class Player:
                    pygame.Rect.colliderect(self.rect, p.bottom_rect)
 
     def update(self, ground):
+        if self.sky_collision():
+            self.alive = False
+            self.flap = False
+            self.vel = 0
+            return
+
         if not (self.ground_collision(ground) or self.pipe_collision()):
-            
             self.vel += 0.25
             self.rect.y += self.vel
             if self.vel > 5:
                 self.vel = 5
-            
             self.lifespan += 1
         else:
             self.alive = False
